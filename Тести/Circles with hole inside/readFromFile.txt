@@ -1,0 +1,71 @@
+ public void readPointsAndElementsFromFile()
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt;*.ele;*.poly)|*.ele;*.poly;*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = "C:\\Users\\Andriy\\Desktop\\ урсова робота\\“р≥ангул€ц≥€\\Triangle.NET\\Data";
+            try
+            {
+                if (openFileDialog.ShowDialog() == true)
+                {
+                    string fileName = System.IO.Path.GetDirectoryName(openFileDialog.FileName) + "\\" + System.IO.Path.GetFileNameWithoutExtension(openFileDialog.FileName);
+                    boundaryMas.BoundaryArray = new List<List<List<Boundary>>>();
+                    ReadPointsandthierConnections read = new ReadPointsandthierConnections(fileName + ".poly", 2);  //отримуЇмо масив точок та з'Їднань
+                    d2TriangleMesh1.Points = read.Points;
+
+                    //richTextBox3.Document.Blocks.Clear();
+                    //TextDisplayer.DisplayDoubleMas(richTextBox3, d2TriangleMesh1.Points);// вив≥д зчитаних точок на екран
+                    //boundary.AddNewBoundary(circle.Points, 1);
+                    //subConditionList.Add(new SubCondition[] { new SubCondition(getSelectedCondition(), boundary.PointsArray[boundary.PointsArray.Count - 1][0], boundary.PointsArray[boundary.PointsArray.Count - 1][0]) });
+
+                    //
+                    for (int i = 0; i < subConditionList.Count; i++)//створенн€ масиву граничних з'Їднань, к-сть границь в≥дома ≥з попереднього заповненн€ 
+                    {
+                        boundaryMas.BoundaryArray.Add(new List<List<Boundary>>());
+                        boundaryMas.BoundaryArray[i].Add(new List<Boundary>());
+                    }
+
+                    for (int i = 0; i < read.ConnectionList.Count; i++)// заповненн€ масив≥в ≥з граничними з'Їднанн€ми
+                    {
+                        int firstPointBoundary = (int)d2TriangleMesh1.Points[read.ConnectionList[i][0]][2];//2-boundary value
+                        int secondPointBoundary = (int)d2TriangleMesh1.Points[read.ConnectionList[i][1]][2];
+
+                        if ((firstPointBoundary == secondPointBoundary) && (firstPointBoundary != 0))//((d2TriangleMesh1.Points[read.ConnectionList[i][0]][2]!=0)&&(d2TriangleMesh1.Points[read.ConnectionList[i][1]][2]!=0))
+                        {
+                            boundaryMas.BoundaryArray[firstPointBoundary - 1][0].Add(new Boundary(read.ConnectionList[i][0], read.ConnectionList[i][1], subConditionList[firstPointBoundary - 1][0].GetCondition));
+                        }
+                    }
+
+                    for (int i = 0; i < boundaryMas.BoundaryArray.Count; i++)//сотруванн€ граничних елемент≥в
+                    {
+                        boundaryMas.SetNewValuesToBoundary(i, BoundaryConnection.Sort(0, boundaryMas.BoundaryArray[i]));
+                    }
+
+                    boundary = new Boundaries();//формуванн€ оновленого масиву граничних точок
+                    for (int i = 0; i < boundaryMas.BoundaryArray.Count; i++)
+                    {
+                        List<Point> temp = new List<Point>();
+                        for (int j = 0; j < boundaryMas.BoundaryArray[i].Count; j++)
+                        {
+                            for (int k = 0; k < boundaryMas.BoundaryArray[i][j].Count; k++)
+                                temp.Add(new Point(d2TriangleMesh1.Points[boundaryMas.BoundaryArray[i][j][k].numberP1][0], d2TriangleMesh1.Points[boundaryMas.BoundaryArray[i][j][k].numberP1][1]));
+                        }
+                        boundary.AddNewBoundary(temp, (i + 1));
+                    }
+                    d2TriangleMesh1.ReadElementsFromFile(fileName + ".ele");
+
+                    TextDisplayer.DisplayIntMas(richTextBox3, d2TriangleMesh1.Elements);// вив≥д трикутних елемент≥в
+                }
+            }
+            catch (FormatException ex)// uncomment
+            {
+                MessageBox.Show(" File has incorrect format, please try again " + ex.Message);
+            }
+            catch (IOException ex1)
+            {
+                MessageBox.Show(" File has some invalid arguments, please try again " + ex1.Message);
+            }
+            catch (Exception ex2)
+            {
+                MessageBox.Show(" Please try again " + ex2.Message);
+            }
+        }

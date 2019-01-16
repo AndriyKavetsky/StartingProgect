@@ -1,0 +1,129 @@
+//    //Доброго вечора. Поки що розвяжіть задачу окремо, так ніби нема зовнішньої з побудовою нової сітки для круга. 
+        //    // По можливості. бажано, щоб сітка була такою ж , як і в задачі на концентрації, тільки з іншою нумерацією. 
+        //    //Подивимось на природу процесу. Але тут треба щось придумувати.
+        //    //Якщо сітки співпадатимуть і Ви виходитемете з однієї точки у Вас будуть вузли на границі йти підряд однаково. 
+        //    //незважаючи на різну нумерацію в обох випадках
+
+//double doubleSquare = 0;
+                    //for (int j = 0; j < (n - 1); j++)
+                    //{
+                    //    doubleSquare += trianglePoints[j].X * trianglePoints[j + 1].Y -
+                    //         trianglePoints[j + 1].X * trianglePoints[j].Y;
+                    //}
+                    //doubleSquare += trianglePoints[n - 1].X * trianglePoints[0].Y -
+                    //    trianglePoints[0].X * trianglePoints[n - 1].Y;
+                    //writer.WriteLine(" double area [" + i + "] = " + doubleSquare);
+
+                    //double fraction = 1.0 / (2.0 * doubleSquare);
+                    //double[] a = new double[n];
+                    //double[] b = new double[n];
+                    //double[] c = new double[n];
+                    //for (int j = 0; j < n; j++)
+                    //{
+                    //    writer.WriteLine(" j+1 = " + ((j + 1) % 3) + " j+2 = " + ((j + 2) % 3));
+                    //    a[j] = trianglePoints[(j + 1) % 3].X * trianglePoints[(j + 2) % 3].Y - trianglePoints[(j + 2) % 3].X * trianglePoints[(j + 1) % 3].Y;
+                    //    b[j] = trianglePoints[(j + 1) % 3].Y - trianglePoints[(j + 2) % 3].Y;
+                    //    c[j] = trianglePoints[(j + 2) % 3].X - trianglePoints[(j + 1) % 3].X;
+                    //    writer.WriteLine(" a[" + j + "] = " + a[j] + " b[" + j + "] = " + b[j] + " c[" + j + "] = " + c[j]);
+                    //}
+
+//for (int j = 0; j < n; j++)
+                    //{
+                    //    keMatrix[j] = new double[n];
+                    //    keMatrix[j][j] = fraction * (Math.Pow(Physics.a11, 1) * b[j] * b[j] + Math.Pow(Physics.a22, 1) * c[j] * c[j]);
+                    //}
+                    //for (int j = 1; j < n; j++)
+                    //{
+                    //    for (int k = 0; k < j; k++)
+                    //    {
+                    //        keMatrix[k][j] = keMatrix[j][k] = fraction * (Math.Pow(Physics.a11, 1) * b[k] * b[j] + Math.Pow(Physics.a22, 1) * c[k] * c[j]);
+                    //    }
+                    //}
+                    //writer.WriteLine("\n" + "ke matrix ");
+                    //for (int j = 0; j < n; j++)
+                    //{
+                    //    for (int k = 0; k < n; k++)
+                    //    {
+                    //        writer.Write(String.Format("{0:0.000}", keMatrix[j][k]) + " ");
+                    //    }
+                    //    writer.WriteLine();
+                    //}
+
+                    //fraction = doubleSquare / 24.0;
+                    //double doublefraction = 2.0 * fraction;
+
+
+//for (int j = 0; j < n; j++)
+                    //{
+                    //    meMatrix[j] = new double[n];
+                    //    meMatrix[j][j] = doublefraction;
+                    //    ceMatrix[j] = new double[n];
+                    //    ceMatrix[j][j] = doublefraction;
+                    //}
+                    //for (int j = 1; j < n; j++)
+                    //{
+                    //    for (int k = 0; k < j; k++)
+                    //    {
+                    //        meMatrix[k][j] = meMatrix[j][k] = fraction;
+                    //        ceMatrix[k][j] = ceMatrix[j][k] = fraction;
+                    //    }
+                    //}
+                    //writer.WriteLine("\n" + "me matrix");
+                    //for (int j = 0; j < n; j++)
+                    //{
+                    //    for (int k = 0; k < n; k++)
+                    //    {
+                    //        writer.Write(String.Format("{0:0.000}", Physics.d * meMatrix[j][k]) + " ");
+                    //    }
+                    //    writer.WriteLine();
+                    //}
+
+                    //double[] fvector = new double[n];
+                    //for (int j = 0; j < n; j++)
+                    //{
+                    //    fvector[j] = Physics.f(trianglePoints[j].X, trianglePoints[j].Y);
+                    //}
+
+
+
+                            //writer.WriteLine("\n" + domain.Boundaries.BoundaryArray[i][j][r].condition.ToString() + "\n" + "ge matrix ");
+                            //for (int k = 0; k < n2; k++) //для квадратичних n2=3 беремо по три точки
+                            //{
+                            //    for (int p = 0; p < n2; p++)
+                            //    {
+                            //        writer.Write(String.Format("{0:0.000}", leftSideCoeficient * geMatrix[k][p]) + " ");
+                            //    }
+                            //    writer.WriteLine();
+                            //}
+
+
+
+                            //double leftSideCoeficient = 1.0;// sugma/beta*coef
+                            //double rightSideCoeficient = 1.0;// sugma/beta*coef
+
+                            //switch (domain.Boundaries.BoundaryArray[i][j][r].condition)
+                            //{
+                            //    case (Condition.Dirichlet):
+                            //        {
+                            //            leftSideCoeficient = (Physics.sigma[i][j] * Math.Pow(10, 16)) / (Physics.beta[i][j]);
+                            //            rightSideCoeficient = (Physics.sigma[i][j] * Math.Pow(10, 16)) / (Physics.beta[i][j]);
+                            //        }
+                            //        break;
+                            //    case (Condition.Neumann):
+                            //        {
+                            //            leftSideCoeficient = (Physics.sigma[i][j] * Math.Pow(10, -16)) / (Physics.beta[i][j]);
+                            //            rightSideCoeficient = (Physics.sigma[i][j]) / (Physics.beta[i][j]);
+                            //        }
+                            //        break;
+                            //    case (Condition.Robin):
+                            //        {
+                            //            leftSideCoeficient = (Physics.sigma[i][j]) / (Physics.beta[i][j]);
+                            //            rightSideCoeficient = (Physics.sigma[i][j]) / (Physics.beta[i][j]);
+                            //        }
+                            //        break;
+                            //}
+
+
+
+
+

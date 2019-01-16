@@ -1,0 +1,48 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2016
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StartingProgect", "StartingProgect\StartingProgect.csproj", "{8E085932-D66D-4BEE-8454-57DC6C14DA6A}"
+EndProject
+Project("{911E67C6-3D85-4FCE-B560-20A9C3E3FF48}") = "Mesh Explorer", "StartingProgect\bin\Debug\Triangle\Mesh Explorer.exe", "{F1C56BB8-3D58-4DFE-BC82-1D731463C7C1}"
+	ProjectSection(DebuggerProjectSystem) = preProject
+		PortSupplier = 00000000-0000-0000-0000-000000000000
+		Executable = D:\Курсова робота\StartingProgect\StartingProgect\bin\Debug\Triangle\Mesh Explorer.exe
+		RemoteMachine = DESKTOP-V78J7F7
+		StartingDirectory = D:\Курсова робота\StartingProgect\StartingProgect\bin\Debug\Triangle
+		Environment = Default
+		LaunchingEngine = 00000000-0000-0000-0000-000000000000
+		UseLegacyDebugEngines = No
+		LaunchSQLEngine = No
+		AttachLaunchAction = Yes
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Debug|x86 = Debug|x86
+		Release|Any CPU = Release|Any CPU
+		Release|x86 = Release|x86
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Debug|x86.Build.0 = Debug|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Release|x86.ActiveCfg = Release|Any CPU
+		{8E085932-D66D-4BEE-8454-57DC6C14DA6A}.Release|x86.Build.0 = Release|Any CPU
+		{F1C56BB8-3D58-4DFE-BC82-1D731463C7C1}.Debug|Any CPU.ActiveCfg = Release|x86
+		{F1C56BB8-3D58-4DFE-BC82-1D731463C7C1}.Debug|x86.ActiveCfg = Release|x86
+		{F1C56BB8-3D58-4DFE-BC82-1D731463C7C1}.Release|Any CPU.ActiveCfg = Release|x86
+		{F1C56BB8-3D58-4DFE-BC82-1D731463C7C1}.Release|x86.ActiveCfg = Release|x86
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F0E8B825-5037-4387-98B2-B1A3E58B248E}
+	EndGlobalSection
+EndGlobal

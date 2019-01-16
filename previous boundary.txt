@@ -1,0 +1,285 @@
+creating subBoundaries
+        //public void deleteSelectedPointsFromTempList(Point p1,Point p2)
+        //{
+        //    bool isFindedPoint1, isFindedPoint2;
+        //    int number1, number2;
+        //    findSelectedPointAndNumber(p1, selectedBoundaryNumber, out isFindedPoint1, out number1);
+        //    findSelectedPointAndNumber(p2, selectedBoundaryNumber, out isFindedPoint2, out number2);
+        //    if((isFindedPoint1)&&(isFindedPoint2))
+        //    {
+        //        if(number1<number2)
+        //        {
+        //            selectedBoundaryList.RemoveRange(number1, number2 - number1);
+        //        }
+        //        else
+        //        {
+        //            selectedBoundaryList.RemoveRange(number1, selectedBoundaryList.Count - number1);
+        //            selectedBoundaryList.RemoveRange(0, number1);
+        //        }
+        //        //setBiggerNumber(ref number1,ref number2);
+        //        //selectedBoundaryList.RemoveRange(number1, number2 - number1);                
+        //    }
+        //    //int k = 0;
+        //}
+
+        //public void setBiggerNumber(ref int n1, ref int n2)
+        //{
+        //    int number1 = n1 > n2 ? n2 : n1;
+        //    int number2 = n1 > n2 ? n1 : n2;
+        //    n1 = number1;
+        //    n2 = number2;
+        //}
+
+ public class BoundaryConnection///2d change
+    {    
+        private List<List<Boundary>> boundaryArray;//масиви граничних точок 
+       // private List<int> isTriangulatedBoundary;
+        //private List<List<int[]>> connections;//з'Їднанн€ точок задаютьс€ при потреб≥
+        
+        //points 
+        public BoundaryConnection()
+        {
+            boundaryArray = new List<List<Boundary>>();
+           // isTriangulatedBoundary = new List<int>();
+           // connections = new List<List<int[]>>();
+        }
+        public BoundaryConnection(List<List<Boundary>> boundaryArray, 
+                List<int> isTriangulatedBoundary)
+        {
+            this.boundaryArray = boundaryArray;
+            //this.isTriangulatedBoundary = isTriangulatedBoundary;
+        }
+        public BoundaryConnection(List<List<Point>> pointsArray,
+               List<int> isTriangulatedBoundary,List<List<int[]>> connections)
+        {
+            this.boundaryArray = pointsArray;
+            this.isTriangulatedBoundary = isTriangulatedBoundary;
+            this.connections = connections;
+        }
+
+        public void Sort()
+        {
+            for (int i = 0; i < boundaryArray.Count; i++)
+            {
+                List<Boundary> temp = new List<Boundary>();
+                bool isSortedBoundary = false;
+                int k = 0;
+                temp.Add(new Boundary(boundaryArray[i][k].NumberP1, boundaryArray[i][k].numberP2, boundaryArray[i][k].condition));
+
+                while (!isSortedBoundary)
+                {
+                    if(boundaryArray[i].Count<=0)
+                    {
+                        isSortedBoundary = true;
+                        break;
+                    }
+                    // boundaryArray[i][k]
+
+                    boundaryArray[i].RemoveAt(k);
+                    
+                    temp.Add(new Boundary(boundaryArray[i][k].NumberP1, boundaryArray[i][k].numberP2, boundaryArray[i][k].condition));
+
+                    k = FindPosition(i, boundaryArray[i][k].numberP2);
+                }
+            }
+        }
+        public int FindPosition(int boundaryNumber,int pointNumber)//пошук
+        {
+            for (int i = 0; i<boundaryArray[boundaryNumber].Count; i++)
+            {
+                if (boundaryArray[boundaryNumber][i].NumberP1 == pointNumber)
+                    return i;
+            }
+
+            return 0;
+        }
+        public void AddNewBoundary(List<Point> points, int boundary)
+        {
+            if (points == null)
+            {
+                return;
+            }
+            boundaryArray.Add(points);
+            connections.Add(new List<int[]>());//empty when connections are ordered
+            if ((boundary == 1) || (boundary == 2) || (boundary == 3))
+                isTriangulatedBoundary.Add(boundary);
+            else
+            {
+                isTriangulatedBoundary.Add(1);
+            }
+        }
+
+        public void AddNewBoundary(List<Point> points, List<int[]>connection,int boundary)
+        {
+            if (points == null)
+            {
+                return;
+            }
+            boundaryArray.Add(points);
+            connections.Add(connection);
+            if ((boundary == 1) || (boundary == 2) || (boundary == 3))
+                isTriangulatedBoundary.Add(boundary);
+            else
+            {
+                isTriangulatedBoundary.Add(1);
+            }
+        }
+        public List<List<Point>> PointsArray
+        {
+            get
+            {
+                return boundaryArray;
+            }
+        }
+        public List<int> IsTriangulatedBoundary
+        {
+            get
+            {
+                return isTriangulatedBoundary;
+            }
+        }
+
+        public List<List<int []>> Connections
+        {
+            get
+            {
+                return connections;
+            }
+        }
+    }
+
+
+
+
+
+
+
+public class BoundaryPoints
+    {
+        private List<List<Point>> points;
+        private List<List<int>> pointsNumber;
+        private int countBoundary;//amount of boundaries      
+        private int boundaryPointsCount;
+        private OpenFileDialog openFileDialog;
+
+        //public BoundaryPoints(int countBoundary,List<Function> functions)
+        //{
+        //    points = new List<List<Point>>(countBoundary);
+        //    pointsNumber = new List<List<int>>(countBoundary);
+
+        //    this.countBoundary = countBoundary;
+        //    this.functions = functions;
+            
+        //    for (int i = 0; i < countBoundary; i++)
+        //    {
+        //        points.Add(new List<Point>());
+        //        pointsNumber.Add(new List<int>());
+        //        //points[i] = new List<Point>();
+        //        //pointsNumber[i] = new List<int>();
+        //    }
+            
+        //    openFileDialog = new OpenFileDialog();
+        //    openFileDialog.Filter = "Text files (*.txt;*.ele;*.poly)|*.ele;*.poly;*.txt|All files (*.*)|*.*";
+        //    openFileDialog.InitialDirectory = "C:\\Users\\Andriy\\Desktop\\ урсова робота\\“р≥ангул€ц≥€\\Triangle.NET\\Data";
+        //    if (openFileDialog.ShowDialog() == true)
+        //        FillBoundaries(openFileDialog.FileName);
+            
+        //    Print();
+        //}
+
+        public BoundaryPoints(int countBoundary)
+        {
+            boundaryPointsCount = 0;
+            points = new List<List<Point>>(countBoundary);
+            pointsNumber = new List<List<int>>(countBoundary);
+
+            this.countBoundary = countBoundary;        
+
+            for (int i = 0; i < countBoundary; i++)
+            {
+                points.Add(new List<Point>());
+                pointsNumber.Add(new List<int>());
+                //points[i] = new List<Point>();
+                //pointsNumber[i] = new List<int>();
+            }
+
+            openFileDialog = new OpenFileDialog();
+            openFileDialog.Filter = "Text files (*.txt;*.ele;*.poly)|*.ele;*.poly;*.txt|All files (*.*)|*.*";
+            openFileDialog.InitialDirectory = "C:\\Users\\Andriy\\Desktop\\ урсова робота\\“р≥ангул€ц≥€\\Triangle.NET\\Data";
+            if (openFileDialog.ShowDialog() == true)
+                FillBoundaries(openFileDialog.FileName);
+            Print(); 
+        }
+
+        public void FillBoundaries(string fileName)
+        {
+            boundaryPointsCount = 0;
+            StreamReader reader = new StreamReader(fileName);
+
+            int pointsCount = Convert.ToInt32(reader.ReadLine().Split()[0]);
+
+            for (int i = 0; i < pointsCount; i++)
+            {
+                string[] mas = reader.ReadLine().Split();
+                if (Convert.ToInt32(mas[3]) != 0)
+                {
+                    boundaryPointsCount++;
+                    points[Convert.ToInt32(mas[3]) - 1].Add(
+                        new Point(
+                            Convert.ToDouble(mas[1].Replace('.', ',')), 
+                            Convert.ToDouble(mas[2].Replace('.', ',')))
+                            );
+                }                
+            }
+            reader.Close();
+        }
+
+        //public void FillBoundaries(string fileName)
+        //{
+        //    StreamReader reader = new StreamReader(fileName);
+
+        //    int pointsCount =Convert.ToInt32( reader.ReadLine().Split()[0]);
+
+        //    for (int i = 0; i < pointsCount; i++)
+        //    {
+        //        string[] mas = reader.ReadLine().Split();
+        //        if (Convert.ToInt32(mas[3]) == 1)
+        //        {
+        //            boundaryPointsCount++;
+        //            Point p = new Point(Convert.ToDouble(mas[1].Replace('.',',')), Convert.ToDouble(mas[2].Replace('.',',')));
+        //            for (int j = 0; j < functions.Count; j++)
+        //            {
+        //                if (Math.Abs(functions[j](p.X, p.Y)) < Math.Pow(10, -5))
+        //                {
+        //                    points[j].Add(p);
+        //                    pointsNumber[j].Add(i);
+        //                    break;
+        //                }
+        //            }
+        //        }                
+        //    }
+        //    reader.Close();
+            
+        //}
+
+        public void Print()
+        {
+            StreamWriter writer = new StreamWriter("Result.txt");
+
+            writer.WriteLine(boundaryPointsCount);
+
+            for (int i = 0; i < points.Count; i++)
+            {
+                
+                for (int j = 0; j < points[i].Count; j++)
+                {
+                    writer.Write(i.ToString() + ' ' + j.ToString());
+                    writer.Write(' ' + points[i][j].X.ToString()+' '+points[i][j].Y.ToString());
+                    writer.WriteLine();
+                }
+                
+            }
+            writer.Close();
+        }
+
+    }

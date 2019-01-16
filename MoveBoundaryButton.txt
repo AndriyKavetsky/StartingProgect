@@ -1,0 +1,134 @@
+//for (int iter = 0; iter < 2; iter++)
+            //{
+            //    int n = 2;// add another moethod
+            //    Physics.a11 = 1.0;
+            //    Physics.a22 = 1.0;
+            //    Physics.d = 1.0;
+            //    Physics.beta = new List<List<double>>();
+            //    Physics.Tc = new List<List<double>>();
+            //    Physics.sigma = new List<List<double>>();
+            //    for (int i = 0; i < n; i++)//initialization of boundaries
+            //    {
+            //        Physics.beta.Add(new List<double>());
+            //        Physics.sigma.Add(new List<double>());
+            //        Physics.Tc.Add(new List<double>());
+            //    }
+            //    for (int i = 0; i < n; i++)//first boundary
+            //    {
+            //        Physics.beta[i].Add(1.0);
+            //        Physics.sigma[i].Add(1.0);
+            //        if (i == 0)
+            //            Physics.Tc[i].Add(0.0);
+            //        else
+            //            Physics.Tc[i].Add(1.0);
+            //    }
+            //    ////////////////////////////////initial concentration file directory
+            //    string locConcPolyFile = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location).ToString() + "\\" + "ConcentrationPoly";
+            //    ////////////////////////////////
+            //    subConditionList = new List<SubCondition[]>();
+            //    subConditionList.Add(new SubCondition[] { new SubCondition(Condition.Dirichlet, new Point(0, 0), new Point(0, 0)) });
+            //    subConditionList.Add(new SubCondition[] { new SubCondition(Condition.Dirichlet, new Point(0, 0), new Point(0, 0)) });
+            //    var fillConc = ReadPointsandthierConnections.readPointsAndElementsFromFile(subConditionList, locConcPolyFile);
+            //    D2TriangleMesh2 d2TriangleMesh2 = new D2TriangleMesh2(new TriangularApproximation2D2P(), fillConc.getMesh().Points.Length,
+            //        fillConc.getMesh().ElementCount, fillConc.getMesh().Elements, fillConc.getMesh().Points);
+            //    boundary = fillConc.getBoundaries();
+            //    BoundaryConnection tempBoundary = fillConc.getBoundCon();
+            //    tempBoundary.OwerWriteToSquareApproximation(d2TriangleMesh2.Points);
+            //    Domain domain1 = new Domain(d2TriangleMesh2, tempBoundary);
+
+
+            //    //was before for concentration
+            //    //D2TriangleMesh2 d2TriangleMesh2 = new D2TriangleMesh2(new TriangularApproximation2D2P(), d2TriangleMesh1.Points.Length, d2TriangleMesh1.ElementCount, d2TriangleMesh1.Elements, d2TriangleMesh1.Points);
+            //    //BoundaryConnection tempBoundary = new BoundaryConnection(boundaryMas.BoundaryArray);
+            //    //tempBoundary.OwerWriteToSquareApproximation(d2TriangleMesh2.Points);//
+            //    //Domain domain1 = new Domain(d2TriangleMesh2, tempBoundary);
+            //    //finding concentration
+            //    FEMSolver2D2P ap2 = new FEMSolver2D2P(domain1);
+            //    double[] concentration = ap2.solve2().result;// розв'язування задачі на концентрацію
+            //                                                 //finding pressure
+            //    Physics.beta[0][0] = 1.0;
+            //    Physics.sigma[0][0] = 1.0;
+            //    Physics.Tc[0][0] = 1.0;
+            //    Physics.beta[1][0] = 1.0;
+            //    Physics.sigma[1][0] = 1.0;
+            //    Physics.Tc[1][0] = 0.0;
+
+            //    ////////////////////////////////initial concentration file directory
+            //    string locPresPolyFile = System.IO.Path.GetDirectoryName(Assembly.GetEntryAssembly().Location).ToString() + "\\" + "PressurePoly";
+            //    ////////////////////////////////
+            //    //reading values for calculating pressure
+            //    List<SubCondition[]> subConditionList2 = new List<SubCondition[]>();
+            //    subConditionList2.Add(new SubCondition[] { new SubCondition(Condition.Dirichlet, new Point(0, 0), new Point(0, 0)) });
+            //    var filledRes = ReadPointsandthierConnections.readPointsAndElementsFromFile(subConditionList2, locPresPolyFile);
+            //    D2TriangleMesh2 d2TriangleMeshPr = new D2TriangleMesh2(new TriangularApproximation2D2P(), filledRes.getMesh().Points.Length, filledRes.getMesh().ElementCount, filledRes.getMesh().Elements, filledRes.getMesh().Points);
+            //    Boundaries boundaryPr = filledRes.getBoundaries();
+            //    BoundaryConnection boundaryMasPr = filledRes.getBoundCon();
+            //    boundaryMasPr.OwerWriteToSquareApproximation(d2TriangleMeshPr.Points);
+            //    Domain domainPr = new Domain(d2TriangleMeshPr, boundaryMasPr);
+
+            //    FEMSolver2D2P preassureSolver = new FEMSolver2D2P(domainPr);
+            //    double[] pressure = preassureSolver.solvePressure().result;
+
+            //    richTBoxSolver.AppendText("Pressure Solved");
+
+            //    double[] concSolution = FillConcentrationValues(domainPr, domain1, concentration);
+
+            //    //copying old domain points
+            //    Domain oldDomain = new Domain((Mesh)domainPr.Meshes.Clone(), (BoundaryConnection)boundaryMasPr.Clone());
+            //    List<List<Point>> pointsArray1 = new List<List<Point>>();//точки попередньої границі
+            //    for (int i = 0; i < oldDomain.Boundaries.BoundaryArray.Count; i++)
+            //    {
+            //        pointsArray1.Add(new List<Point>());
+            //        //tempPointsArray.Add(new List<Point>());
+            //        for (int j = 0; j < oldDomain.Boundaries.BoundaryArray[i].Count; j++)
+            //        {
+            //            for (int k = 0; k < oldDomain.Boundaries.BoundaryArray[i][j].Count; k++)
+            //            {
+            //                pointsArray1[i].Add(new Point(oldDomain.Meshes.Points[oldDomain.Boundaries.BoundaryArray[i][j][k].numberP1][0],
+            //                    oldDomain.Meshes.Points[oldDomain.Boundaries.BoundaryArray[i][j][k].numberP1][1]));
+            //            }
+            //        }
+            //    }
+            //    Boundaries boundaryCon = new Boundaries(pointsArray1, new List<int>());
+
+            //    Domain newDomain = boundaryMasPr.Change(concentration, pressure, domainPr);//пошук нової границі
+
+            //    List<List<Point>> pointsArray = new List<List<Point>>();//точки нової границі
+            //    for (int i = 0; i < newDomain.Boundaries.BoundaryArray.Count; i++)
+            //    {
+            //        pointsArray.Add(new List<Point>());
+            //        //tempPointsArray.Add(new List<Point>());
+            //        for (int j = 0; j < newDomain.Boundaries.BoundaryArray[i].Count; j++)
+            //        {
+            //            for (int k = 0; k < newDomain.Boundaries.BoundaryArray[i][j].Count; k++)
+            //            {
+            //                pointsArray[i].Add(new Point(newDomain.Meshes.Points[newDomain.Boundaries.BoundaryArray[i][j][k].numberP1][0],
+            //                    newDomain.Meshes.Points[newDomain.Boundaries.BoundaryArray[i][j][k].numberP1][1]));
+            //            }
+            //        }
+            //    }
+            //    Boundaries boundary1 = new Boundaries(pointsArray, new List<int>());
+            //    //
+            //    show = new Show(new int[] { 0, 10, 0, 10 }, cDrawBoundary.Width, cDrawBoundary.Height, cDrawBoundary);
+            //    show.ShowCoordinates1();
+            //    show.ShowGrid();
+            //    MinMaxValue minMax1 = new MinMaxValue(boundaryCon.PointsArray[boundaryCon.PointsArray.Count - 1]);
+            //    cDrawBoundary.Children.Clear(); //drawfigures
+            //    show.SetNewValues(minMax1.MinMaxValues());
+            //    show.ShowCoordinates1();
+            //    show.ShowGrid();
+            //    for (int i = 0; i < boundaryCon.PointsArray.Count; i++)
+            //    {
+            //        show.ShowFigure(boundaryCon.PointsArray[i], richTextBox, richTextBox2);
+            //    }
+            //    //
+            //    show.SelectedColor = Brushes.Aqua;
+            //    for (int i = 0; i < boundary1.PointsArray.Count; i++)
+            //    {
+            //        show.ShowFigure(boundary1.PointsArray[i], richTextBox, richTextBox2);
+            //    }
+            //    //Creating poly files for concentration and pressure
+            //    FormTrianglePolyFiles(boundary, boundary1, 0, "ConcentrationPoly.poly", "PressurePoly.poly");
+            //    BuildMesh("ConcentrationPoly.poly");
+            //    BuildMesh("PressurePoly.poly");
+            //}

@@ -1,0 +1,424 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="StartingProgect.D2TriangleLinearApproximationNormal" Collapsed="true">
+    <Position X="18.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAACAAAAAAAAAAAAAAAAAAAAAAMAAAAAgAAAAAAAABA=</HashCode>
+      <FileName>2DTriangleLinearApproximationNormal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.App" Collapsed="true">
+    <Position X="13" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>App.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Approximation" Collapsed="true">
+    <Position X="2.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACwAAAAIAAEAAAABACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Approximation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BaseFunctions1D1" Collapsed="true">
+    <Position X="14.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseFunctions1D1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BaseFunctions1D2" Collapsed="true">
+    <Position X="16.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseFunctions1D2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BaseFunctions2D1" Collapsed="true">
+    <Position X="2.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAACwAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseFunctions2D1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BaseFunctions2D2" Collapsed="true">
+    <Position X="18.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAAAAAAAACAAAAAAAAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>BaseFunctions2D2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BesierCurves" Collapsed="true">
+    <Position X="20" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAICAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAAAA=</HashCode>
+      <FileName>BesierCurves.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Boundaries" Collapsed="true">
+    <Position X="21.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAAABAAAAAAAQAAAAUAAAAAAAAAAAIAAAACAAAAA=</HashCode>
+      <FileName>Boundaries.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Boundary" Collapsed="true">
+    <Position X="23.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAJAAAAAAAAgAAACAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Boundary.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BoundaryConnection" Collapsed="true">
+    <Position X="13" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAIAQAIBJAAAAAgAQQAAAAAAAAABAgAKAAAAAgBg=</HashCode>
+      <FileName>BoundaryConnection.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.BoundaryFunctions" Collapsed="true">
+    <Position X="14.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>BoundaryFunctions.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Circle" Collapsed="true">
+    <Position X="10.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACACgAAgAAgAAAAAAAAAAAAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>Circle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.CreateNormal" Collapsed="true">
+    <Position X="16.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CreateNormal.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.D2TriangleMesh1" Collapsed="true">
+    <Position X="0.5" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>D2TriangleMesh1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.D2TriangleMesh2" Collapsed="true">
+    <Position X="2.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAQAAAAAAAAAAAAAAAAAAAAgAAAAAIAAAAAAAA=</HashCode>
+      <FileName>D2TriangleMesh2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Domain" Collapsed="true">
+    <Position X="20" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAgAAAAIAAIBAAAAAAAAAAAAABA=</HashCode>
+      <FileName>Domain.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.FEMSolver" Collapsed="true">
+    <Position X="2.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAACAAAARQAACAAAAAAAEECBEEAAAAAAAAAA=</HashCode>
+      <FileName>FEMSolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.FEMSolver2D1P" Collapsed="true">
+    <Position X="0.5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAABQAAAAAAAAQAAGCAEAAAAAAAAAAA=</HashCode>
+      <FileName>FEMSolver2D1P.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StartingProgect.FEMSolver2D2P" Collapsed="true">
+    <Position X="2.75" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ACAAAAIAAAAAAAQBQAAEAAAAAAAAOCAEAABAAAAAAAA=</HashCode>
+      <FileName>FEMSolver2D2P.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" />
+  </Class>
+  <Class Name="StartingProgect.Figure" Collapsed="true">
+    <Position X="9.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAABAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Figure.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Graphic" Collapsed="true">
+    <Position X="13" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAACAAAAAAAACAAAACAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Graphic.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.InnerPolygonBoundaryProblemOutput" Collapsed="true">
+    <Position X="16.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InnerPolygonBoundaryProblemOutput.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Integration" Collapsed="true">
+    <Position X="18.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgIABAgkQAAQYAAACAAAAAAIgUEAIgIGAIAAAAAAAI=</HashCode>
+      <FileName>Integration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.IntegrationOnSquaredApproximationElement" Collapsed="true">
+    <Position X="20" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAgEQAAQYAAACAAAAAAIgEEAIgBGAIAABAAAAI=</HashCode>
+      <FileName>IntegrationOnSquaredApproximationElement.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.KrankNicholsonSolver2D1" Collapsed="true">
+    <Position X="21.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAACAACAAAAAAAEAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>KrankNicholsonSolver2D1.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.KrankNicholsonSolver2D2" Collapsed="true">
+    <Position X="5" Y="4.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAABAAAABSAAAAAAAAAAAMCAEAAAAAAAAAAA=</HashCode>
+      <FileName>KrankNicholsonSolver2D2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.MainWindow" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="23.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EBCngIIIiBAhMCBAQCBhCCMABAFkpkUUFhAAiARABgA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StartingProgect.Mesh" Collapsed="true">
+    <Position X="2.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABACAAAQCoBAAAIAQAAAAAAACAAIIAAACCCgAABA=</HashCode>
+      <FileName>Mesh.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.MinMaxValue" Collapsed="true">
+    <Position X="13" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ADAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAIADAAAAA=</HashCode>
+      <FileName>MinMaxValue.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.OwerWritePoints" Collapsed="true">
+    <Position X="16.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAQgBAAAAAACQQBAgQAAAAAIIAgAgAABACA=</HashCode>
+      <FileName>OwerWritePoints.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.OwerWriting2D1To2D2" Collapsed="true">
+    <Position X="18.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAACQAAABABAAAAAAAAAIAAAEgAAAEAIAAAAAAAA=</HashCode>
+      <FileName>OwerWriting2D1To2D2.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Physics" Collapsed="true">
+    <Position X="20" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAIAAAAAAAgAABAAABAAAAABAAgAUAAAAqQAAAgA=</HashCode>
+      <FileName>Physics.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.ReadPointsandthierConnections" Collapsed="true">
+    <Position X="21.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AACAAACAgAAAgACAAAwACABMAAAAAAAIAEAAAAAAAAA=</HashCode>
+      <FileName>ReadPointsandthierConnections.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Rectangle" Collapsed="true">
+    <Position X="8.25" Y="1.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAgAAAQAAAAAAAAAAAAAABEgAAAAAABAA=</HashCode>
+      <FileName>Rectangle.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Show" Collapsed="true">
+    <Position X="14.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAAAAEAALABigACAAAAAAAigAngFoAFFmQACgRhAAA=</HashCode>
+      <FileName>Show.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.SlaeSolver" Collapsed="true">
+    <Position X="16.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAABAAAAAAAAAABAAAAAAAAQAAAAAA=</HashCode>
+      <FileName>SlaeSolver.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.SubCondition" Collapsed="true">
+    <Position X="18.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACIAAAAIAQAAAAEAAAAAAAAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>SubCondition.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.TestIntegration" Collapsed="true">
+    <Position X="20" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAA=</HashCode>
+      <FileName>TestIntegration.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.TextDisplayer" Collapsed="true">
+    <Position X="21.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAACAAAAAAAAAA=</HashCode>
+      <FileName>TextDisplayer.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.TriangularApproximation2D1P" Collapsed="true">
+    <Position X="5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAACwAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TriangularApproximation2D1P.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.TriangularApproximation2D2P" Collapsed="true">
+    <Position X="0.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TriangularApproximation2D2P.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.TriangulationFile" Collapsed="true">
+    <Position X="23.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TriangulationFile.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.TwoDimentionalMeshOfTriangularElements1">
+    <Position X="4.75" Y="1.75" Width="2" />
+    <Compartments>
+      <Compartment Name="Methods" Collapsed="true" />
+    </Compartments>
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAABAQAAAAAAAAAAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>TwoDimentionalMeshOfTriangularElements.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Window1" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="13" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIAAACAAAABAABAAAAAAAAACAwQQAAAAAAAAA=</HashCode>
+      <FileName>Window1.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StartingProgect.WindowForDividingBoundaries" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgkAoAMQAAAAIAEwBBAAAAAAAhFAAMABALAIAAAgAQ=</HashCode>
+      <FileName>WindowForDividingBoundaries.xaml.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StartingProgect.PolZap.Formula" Collapsed="true">
+    <Position X="21.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAEBCAAAAAEIEAQAAAEAAAAAAAAAAQ=</HashCode>
+      <FileName>PolZap\Formula.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.PolZap.Function" Collapsed="true">
+    <Position X="23.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAQAAAAQAAAAAAAAAAAAAEIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>PolZap\Function.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.PolZap.Identuficator" Collapsed="true" BaseTypeListCollapsed="true">
+    <Position X="14.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAACQEABAIAAAAAAAAAAAAAAAAAAAIEAA=</HashCode>
+      <FileName>PolZap\Identuficator.cs</FileName>
+    </TypeIdentifier>
+    <Lollipop Position="0.2" Collapsed="true" />
+  </Class>
+  <Class Name="StartingProgect.PolZap.Operation" Collapsed="true">
+    <Position X="14.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAQEAAAQAAAAAACAAAAAAAAAAAACAA=</HashCode>
+      <FileName>PolZap\Operation.cs</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Properties.Resources" Collapsed="true">
+    <Position X="23.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAABEAAAAQAAAAAAAAAAAAAAAIA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StartingProgect.Properties.Settings" Collapsed="true">
+    <Position X="13" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAIAAAAAABAAAAAAAAAAAAAAA=</HashCode>
+    </TypeIdentifier>
+  </Class>
+  <Interface Name="StartingProgect.InnerPolygonBoundaryProblemApproximation" Collapsed="true">
+    <Position X="13" Y="6.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAAAAAAAAA=</HashCode>
+      <FileName>InnerPolygonBoundaryProblemApproximation.cs</FileName>
+    </TypeIdentifier>
+  </Interface>
+  <Enum Name="StartingProgect.Condition" Collapsed="true">
+    <Position X="13" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEBAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAA=</HashCode>
+      <FileName>Condition.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="StartingProgect.State" Collapsed="true">
+    <Position X="14.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQAAEAAAAEAAAAAAAgAAAAAAACAAAAAAAAAAAA=</HashCode>
+      <FileName>MainWindow.xaml.cs</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Delegate Name="StartingProgect.BaseFunctions" Collapsed="true">
+    <Position X="13" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Approximation.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="StartingProgect.IntegralFunctionXY" Collapsed="true">
+    <Position X="18.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAQAAAA=</HashCode>
+      <FileName>Integration.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="StartingProgect.IntegralFunctionX" Collapsed="true">
+    <Position X="16.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAA=</HashCode>
+      <FileName>Integration.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Delegate Name="StartingProgect.BoundaryFunction" Collapsed="true">
+    <Position X="14.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABCAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Physics.cs</FileName>
+    </TypeIdentifier>
+  </Delegate>
+  <Font Name="Segoe UI" Size="9" />
+</ClassDiagram>

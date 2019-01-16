@@ -1,0 +1,24 @@
+//StreamReader reader = new StreamReader("Transition.txt");//TriangleFile
+            //StreamWriter writer2 = new StreamWriter("TriangleFile.txt");
+
+            //string s ;//= reader.ReadLine();
+            //string[] mas = reader.ReadLine().Split();
+            //int kilk=Convert.ToInt32(mas[0]);
+            //s=mas[0];
+            //for (int i = 1; i < mas.Length; i++)
+            //{
+            //    s += ' ' + mas[i];
+            //}
+            //writer2.WriteLine(s);
+
+            //for (int i = 0; i < kilk; i++)
+            //{
+            //    writer2.WriteLine(reader.ReadLine().Replace(',', '.')); 
+            //}
+
+            //while (!reader.EndOfStream)
+            //{
+            //    writer2.WriteLine(reader.ReadLine());
+            //}
+            //reader.Close();
+            //writer2.Close();
